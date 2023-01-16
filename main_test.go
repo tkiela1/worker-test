@@ -1,15 +1,21 @@
-package main_test
+package main
 
 import (
 	"fmt"
 	"os"
 	"strings"
+	"testing"
 )
 
-func main() {
-    fmt.Println("hello world2")
+func TestHello(t *testing.T) {
     for _, e := range os.Environ() {
         pair := strings.SplitN(e, "=", 2)
         fmt.Println(pair[0])
     }
+	got := "helo"
+	want := "Hello, world"
+
+	if got != want {
+		t.Errorf("got %q want %q", got, want)
+	}
 }
