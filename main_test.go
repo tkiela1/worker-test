@@ -1,7 +1,14 @@
-package main_test
+package main
 
-import "fmt"
+import (
+	"testing"
+)
 
-func main() {
-    fmt.Println("hello world")
+func TestHello(t *testing.T) {
+	got := "test"
+	want := "test"
+
+	if got != want {
+		t.Errorf("got %q want %q", got, want)
+	}
 }
