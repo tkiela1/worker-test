@@ -5,7 +5,7 @@ import (
 )
 
 func TestHello(t *testing.T) {
-	got := "test"
+	got := "taest"
 	want := "test"
 
 	if got != want {
